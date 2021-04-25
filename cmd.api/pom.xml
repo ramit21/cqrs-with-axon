@@ -37,6 +37,12 @@
 			<artifactId>axon-spring-boot-starter</artifactId>
 			<version>4.4</version>
 		</dependency>
+		<dependency>
+			<groupId>com.cqrs</groupId>
+			<artifactId>core.lib</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		
 	</dependencies>
 
 	<build>
