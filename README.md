@@ -18,7 +18,7 @@ Ans. CQRS is a very helpful pattern when there is a huge difference in no. of wr
 ----------
 
 Steps:
-1. Run mvn install
+1. Run mvn install on root project. Note the axon-spring-boot-starter dependency in respective pom files.
 2. Start axon server using docker:
 ```
 docker run -d --name axon-server -p 8024:8024 -p 8124:8124 --network myNet --restart always axionq/axonserver:latest
