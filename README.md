@@ -19,14 +19,23 @@ Ans. CQRS is a very helpful pattern when there is a huge difference in no. of wr
 
 Steps:
 1. Run mvn install on root project. Note the axon-spring-boot-starter dependency in respective pom files.
-2. Start axon server using docker:
+2. Create a docker network:
+```
+docker network create --attachable -d overlay myNet
+```
+3. Start axon server using docker:
 ```
 docker run -d --name axon-server -p 8024:8024 -p 8124:8124 --network myNet --restart always axionq/axonserver:latest
 ```
-3. Access Axon server UI:
+4. Access Axon server UI:
 ```
 http://localhost:8024
 ```
+5. Run mongodb docker, which will server as store for events:
+```
+docker run -it -d --name mongo-container -p 27017:27017 --network myNet --restart always -v mongodb_data_container:/data/db mongo:latest
+```
+
 
 About the project:
 
