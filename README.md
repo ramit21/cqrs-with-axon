@@ -28,4 +28,6 @@ docker run -d --name axon-server -p 8024:8024 -p 8124:8124 --network myNet --res
 http://localhost:8024
 ```
 
+About the project:
 
+core.lib is a library that has common events that would be used by both command and query modules.
